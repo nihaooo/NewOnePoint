@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import explame.com.smartbutler.utils.ActivityCollector;
+
 /**
  * Created by www10 on 2017/4/18.
  * Activity 基类
@@ -23,7 +25,14 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TAG = getComponentName().getShortClassName();
+        ActivityCollector.addActivity(this);
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ActivityCollector.removeActivity(this);
 
     }
 }

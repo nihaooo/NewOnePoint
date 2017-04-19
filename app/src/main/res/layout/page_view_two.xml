@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:gravity="center"
-              android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
 
-    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-               android:src="@mipmap/ic_launcher"/>
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-              android:text="TWO"
-              android:textSize="30sp"/>
+    <ImageView
+        android:id="@+id/image_two"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/page_two"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_two"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="25dp"
+        android:text="这里找到你丢失的物品"
+        android:textSize="25sp"/>
 
-</LinearLayout>
+</RelativeLayout>

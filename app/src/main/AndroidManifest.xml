@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="explame.com.smartbutler">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+
     <application
         android:name=".application.BaseApplication"
         android:allowBackup="true"
@@ -23,6 +31,15 @@
 
         <!-- 引导页-->
         <activity android:name=".activity.GuideActivity"></activity>
+
+        <!--登录 -->
+        <activity android:name=".activity.LoginActivity"
+        android:label="登录"></activity>
+
+        <!-- 注册-->
+        <activity android:name=".activity.RegisteredActivity"
+                  android:label="注册"></activity>
+
     </application>
 
 </manifest>
